@@ -1,0 +1,42 @@
+<head>
+
+    <style>
+        * {
+          box-sizing: border-box;   /* Makes styling like padding and alignment relative to canvas instead of using default styling */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Canvas Container (fullscreen container) -->
+    <div style="position: relative; display: inline-block;">
+        <!-- Game HUD Container-->
+        <div style= "position: absolute; display: flex; width: 100%; align-items: center; padding: 20px; "> 
+
+          <!-- playerOne Healthbar -->                
+          <div style= "position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">         
+            <div  style="background-color: yellow; height: 30px; width: 100%;"></div>
+            <div id="playerOneHealth" style= "position:absolute; background: hotpink; top: 0; right: 0; bottom: 0; width: 100%;"></div>
+          </div> 
+
+          <!-- Game Timer -->                                
+          <div id="time" style="background-color: purple; height: 100px; width: 100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">10</div>
+
+          <!-- playerTwo Healthbar--> 
+          <div style= "position: relative; height: 30px; width: 100%">         
+            <div  style="background-color: yellow; height: 30px;"></div>
+            <div id="playerTwoHealth" style= "position:absolute; background: hotpink; top: 0; ; left: 0; bottom: 0; right: 0;"></div>
+          </div>   
+
+        </div>
+        <div id="displayResult"style= "position: absolute; color: white; align-items: center; justify-content: center; top: 0; right: 0; bottom: 0; left: 0; display: none;">Tie</div>
+        <canvas></canvas>
+    </div>  
+    <script src="js/functions.js"></script>  
+    <script src="js/classes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+<!-- NOTE: Most styling was done inline as the majority 
+           of work was done using JavaScript -->
